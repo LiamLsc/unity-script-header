@@ -29,16 +29,14 @@
 
 🧱 配置注释字段
 点击菜单：`Edit → Project Settings → Script Header`
+```
 设置字段和开关：
-- 脚本名（自动）
-- 日期（自动）
-- 作者（Author）
-- 邮箱（Email）
-- 公司（Company）
-- 地点（Location）
-- 描述（Description）
-- 版权信息（Copyright）
+- 脚本名（自动）          - 日期（自动）
+- 作者（Author）          - 邮箱（Email）
+- 公司（Company）         - 地点（Location）
+- 描述（Description）     - 版权信息（Copyright）
 - [✓] 每项启用开关
+```
 
 🧪 测试：创建脚本
 通过右键菜单 Create > C# Script 创建脚本文件，即可自动插入如下格式：
