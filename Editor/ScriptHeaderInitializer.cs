@@ -9,7 +9,8 @@ namespace Liam.ScriptHeader
         [MenuItem("Tools/Script Header/初始化配置文件")]
         public static void InitConfig()
         {
-            string folderPath = "Packages/com.liam.script-header/Resources";
+            //string folderPath = "Packages/com.liam.script-header/Resources";
+            string folderPath = "Assets/Resources";
             string assetPath = $"{folderPath}/ScriptHeaderConfig.asset";
 
             if (!Directory.Exists(folderPath))
