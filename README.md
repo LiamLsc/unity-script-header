@@ -11,17 +11,19 @@
 
 ## 📦 安装方式（推荐 Git URL）
 
-你可以通过 Unity Package Manager 直接从 GitHub 安装本工具：
+### Git URL安装
 
+你可以通过 Unity Package Manager 直接从 GitHub 安装本工具：
 1. 打开 Unity 项目
 2. 进入 `Window > Package Manager`
 3. 点击左上角 “+” → `Add package from Git URL`
 4. 输入以下地址：`https://github.com/LiamLsc/unity-script-header.git`
-5. 获取指定版本：`https://github.com/LiamLsc/unity-script-header#v1.0.0.git`
-替换链接中的`v`为指定版本号即可
 
-
-
+### 本地安装
+1. GitHub > Releases > 下载到本地并解压
+2. 进入 `Window > Package Manager`
+3. 点击左上角 “+” → `Add package from disk`
+4. 选择本地文件夹下的`package.json`文件
 
 ## 🎮 使用方法
 
@@ -96,6 +98,7 @@ Root/
 ```
 
 ## 🧾 许可证 License
+
 本项目使用 MIT License，可自由用于商业和个人项目。
 
 
@@ -106,6 +109,7 @@ Root/
 如有建议、问题或 bug，请提交 Issue 或创建 Pull Request。
 
 ## ✨ 未来计划（TODO）
+
  - 支持其他脚本类型（如 Shader、EditorWindow）
 
  - 提供模板字段变量（如自动获取命名空间）
