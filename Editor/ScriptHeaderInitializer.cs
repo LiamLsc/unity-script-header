@@ -6,7 +6,7 @@ namespace Liam.ScriptHeader
 {
     public static class ScriptHeaderInitializer
     {
-        [MenuItem("Tools/Script Header/初始化配置文件")]
+        //[MenuItem("Tools/Script Header/初始化配置文件")]
         public static void InitConfig()
         {
             string folderPath = "Packages/com.liam.script-header/Resources";
