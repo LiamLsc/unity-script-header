@@ -1,0 +1,21 @@
+{
+  "name": "com.liam.script-header",
+  "displayName": "Unity Script Header",
+  "version": "1.0.0",
+  "unity": "2022.3",
+  "description": "自动为 Unity 新建 C# 脚本插入统一格式的注释头部信息。",
+  "author": {
+    "name": "Liam",
+    "email": "1214661543@qq.com",
+    "url": "https://github.com/LiamLsc"
+  },
+  "keywords": [
+    "unity",
+    "editor",
+    "script",
+    "header",
+    "comment",
+    "tool"
+  ],
+  "category": "Editor"
+}
