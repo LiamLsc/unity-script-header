@@ -4,6 +4,9 @@
 
 支持作者、邮箱、公司、地点、版权、描述等字段，所有信息都可通过 Project Settings 界面配置并动态开关。
 
+![project setting.png](https://img.picui.cn/free/2025/06/27/685e087e73937.png)
+
+![script.png](https://img.picui.cn/free/2025/06/27/685e087e1340b.png)
 
 
 ## 📦 安装方式（推荐 Git URL）
@@ -17,12 +20,8 @@
 5. 获取指定版本：`https://github.com/LiamLsc/unity-script-header#v1.0.0.git`
 替换链接中的`v`为指定版本号即可
 
-### 获取历史版本
-1. 打开 Unity 项目
-2. 进入 `Window > Package Manager`
-3. 点击左上角 “+” → `Add package from Git URL`
-4. 输入以下地址：`https://github.com/LiamLsc/unity-script-header#v1.0.0.git`
-替换指定版本号即可
+
+
 
 ## 🎮 使用方法
 
@@ -60,6 +59,7 @@
 
 
 
+
 ## ⚙️ 功能特性
 ✅ 新建 C# 脚本时自动添加注释头
 
@@ -79,7 +79,7 @@
 
 
 ## 📁 项目结构
-
+```
 Root/                      
 ├── package.json                   
 ├── README.md                       
@@ -93,10 +93,12 @@ Root/
 │   └── ScriptHeaderInitializer.cs
 ├── Resources/
 │   └── ScriptHeaderConfig.asset    
-
+```
 
 ## 🧾 许可证 License
 本项目使用 MIT License，可自由用于商业和个人项目。
+
+
 © 2025 Liam. 保留署名权。
 
 
