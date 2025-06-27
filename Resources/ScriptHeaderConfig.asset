@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af0ba0cc5d8b1c54da34bfb9c9aa3bd7, type: 3}
+  m_Name: ScriptHeaderConfig
+  m_EditorClassIdentifier: 
+  author: YourName
+  includeAuthor: 1
+  company: YourCompany
+  includeCompany: 0
+  email: your@email.com
+  includeEmail: 0
+  location: ShangHai, China
+  includeLocation: 0
+  defaultDescription: Please fill in the script function description
+  includeDescription: 1
+  copyright: "\xA9 2025 YourCompany. All Rights Reserved."
+  includeCopyright: 0

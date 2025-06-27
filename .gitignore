@@ -70,7 +70,6 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
-ScriptHeaderConfig.asset
 
 # Packed Addressables
 /[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
