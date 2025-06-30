@@ -12,15 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0ba0cc5d8b1c54da34bfb9c9aa3bd7, type: 3}
   m_Name: ScriptHeaderConfig
   m_EditorClassIdentifier: 
-  author: YourName
-  includeAuthor: 1
-  company: YourCompany
-  includeCompany: 0
-  email: your@email.com
-  includeEmail: 0
-  location: ShangHai, China
-  includeLocation: 0
-  defaultDescription: Please fill in the script function description
-  includeDescription: 1
-  copyright: "\xA9 2025 YourCompany. All Rights Reserved."
-  includeCopyright: 0
+  enableFeature: 1
+  headerFields:
+  - enable: 0
+    key: FileName
+    value: '#FILENAME#'
+  - enable: 1
+    key: Date
+    value: '#DATETIME#'
+  - enable: 1
+    key: Author
+    value: '#AUTHOR#'
+  - enable: 1
+    key: Email
+    value: 123456789@163.com
+  - enable: 1
+    key: Description
+    value: 

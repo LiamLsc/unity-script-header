@@ -23,41 +23,27 @@ namespace Liam.ScriptHeader
         {
             if (settings == null)
             {
-                EditorGUILayout.HelpBox("ScriptHeaderConfig 未找到。请使用菜单 Tools > Script Header > 初始化配置文件", MessageType.Warning);
+                EditorGUILayout.HelpBox("ScriptHeaderConfig 未找到，请点击 Assets > Create > Script Header > 创建配置文件", MessageType.Warning);
                 return;
             }
 
             settings.Update();
 
             EditorGUILayout.Space();
-            EditorGUILayout.LabelField("注释配置", EditorStyles.boldLabel);
+            EditorGUILayout.LabelField("全局设置", EditorStyles.boldLabel);
+            var enableProp = settings.FindProperty("enableFeature");
+            EditorGUILayout.PropertyField(enableProp, new GUIContent("注释功能"));
+            EditorGUILayout.Space();
 
-            DrawField("author", "作者", "includeAuthor");
-            DrawField("company", "公司", "includeCompany");
-            DrawField("email", "邮箱", "includeEmail");
-            DrawField("location", "地点", "includeLocation");
-            DrawField("defaultDescription", "描述", "includeDescription");
-            DrawField("copyright", "版权信息", "includeCopyright");
-
+            EditorGUILayout.LabelField("注释字段配置", EditorStyles.boldLabel);
+            
+            SerializedProperty fieldsProp = settings.FindProperty("headerFields");
+            EditorGUILayout.PropertyField(fieldsProp, true);
+            
             settings.ApplyModifiedProperties();
         }
 
-        private void DrawField(string fieldName, string label, string toggleName)
-        {
-            SerializedProperty toggleProp = settings.FindProperty(toggleName);
-            SerializedProperty fieldProp = settings.FindProperty(fieldName);
-
-            EditorGUILayout.BeginVertical(EditorStyles.helpBox);
-            toggleProp.boolValue = EditorGUILayout.ToggleLeft($"启用 {label}", toggleProp.boolValue, EditorStyles.boldLabel);
-            if (toggleProp.boolValue)
-            {
-                EditorGUI.indentLevel++;
-                EditorGUILayout.PropertyField(fieldProp, new GUIContent(label));
-                EditorGUI.indentLevel--;
-            }
-            EditorGUILayout.EndVertical();
-            EditorGUILayout.Space(4);
-        }
+        
 
         [SettingsProvider]
         public static SettingsProvider CreateScriptHeaderSettings()

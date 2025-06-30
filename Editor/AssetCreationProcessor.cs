@@ -8,8 +8,11 @@ namespace Liam.ScriptHeader
         public static void OnWillCreateAsset(string assetPath)
         {
             assetPath = assetPath.Replace(".meta", "");
-
+            
             if (!assetPath.EndsWith(".cs")) return;
+
+            var config = ScriptHeaderConfig.Instance;
+            if (config == null || !config.enableFeature) return; 
 
             string fullPath = Path.Combine(Directory.GetCurrentDirectory(), assetPath);
             string scriptName = Path.GetFileNameWithoutExtension(assetPath);

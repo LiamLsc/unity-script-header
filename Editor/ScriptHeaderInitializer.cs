@@ -6,18 +6,47 @@ namespace Liam.ScriptHeader
 {
     public static class ScriptHeaderInitializer
     {
-        //[MenuItem("Tools/Script Header/初始化配置文件")]
+        [MenuItem("Assets/Create/Script Header/创建配置文件", priority = 2000)]
         public static void InitConfig()
         {
-            string folderPath = "Packages/com.liam.script-header/Resources";
-            string assetPath = $"{folderPath}/ScriptHeaderConfig.asset";
+            string[] possiblePaths = {
+                "Packages/com.liam.script-header/Resources",
+                "Assets/Resources"
+            };
 
-            if (!Directory.Exists(folderPath))
-                Directory.CreateDirectory(folderPath);
-
-            if (File.Exists(assetPath))
+            string assetPath = null;
+            
+            foreach (var path in possiblePaths)
             {
-                EditorUtility.DisplayDialog("提示", "配置文件已存在，无需重复创建。", "确定");
+                string testPath = $"{path}/ScriptHeaderConfig.asset";
+                if (File.Exists(testPath))
+                {
+                    EditorUtility.DisplayDialog("提示", "配置文件已存在，无需重复创建。", "确定");
+                    return;
+                }
+                assetPath = testPath;
+            }
+
+            foreach (var path in possiblePaths)
+            {
+                if (!Directory.Exists(path))
+                {
+                    try
+                    {
+                        Directory.CreateDirectory(path);
+                        assetPath = $"{path}/ScriptHeaderConfig.asset";
+                        break;
+                    }
+                    catch
+                    {
+                        continue;
+                    }
+                }
+            }
+
+            if (string.IsNullOrEmpty(assetPath))
+            {
+                EditorUtility.DisplayDialog("错误", "无法创建配置文件目录", "确定");
                 return;
             }
 
