@@ -6,9 +6,11 @@
 
 支持团队协作，各自配置，互不影响，SCM默认忽略不上传。
 
-![setting.png](https://img.picui.cn/free/2025/06/30/6861fa535f22e.png)
 
-![script.png](https://img.picui.cn/free/2025/06/27/685e087e1340b.png)
+![QQ20250711-112044.png](https://cdn.picui.cn/vip/2025/07/11/68708331e797d.png)
+
+![QQ20250711-112112.png](https://cdn.picui.cn/vip/2025/07/11/68708331db539.png)
+
 
 ## 📦 安装方式（推荐 Git URL）
 
