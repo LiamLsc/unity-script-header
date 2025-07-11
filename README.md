@@ -21,7 +21,12 @@
 1. 打开 Unity 项目
 2. 进入 `Window > Package Manager`
 3. 点击左上角 “+” → `Add package from Git URL`
-4. 输入以下地址：`https://github.com/LiamLsc/unity-script-header.git`
+4. 输入以下地址：
+
+    - 国际版
+    `https://github.com/LiamLsc/unity-script-header.git`
+    - 国内版
+    `https://gitee.com/Liam_Lee/unity-script-header.git`
 
 ### 本地安装
 
